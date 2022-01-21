@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 99.8%;
+  height: 689px;
+  display: flex;
+  /* border: 1px solid red; */
+}
+.container div {
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid red; */
+}
+.container .left-color {
+  background: linear-gradient(to right, rgb(221, 76, 76), rgb(252, 159, 205));
+}
+.container .left-color img {
+  width: 20%;
+  margin: 280px;
+}
+
+.container .right-color {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  width: 35%;
+  height: 550px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.right-color h1{
+  margin:40px;
+}
+
+.right-color input {
+  display: grid;
+  border:1px solid black;
+  border-radius: 5px;
+  margin: 50px 0 0 50px;
+  width: 60%;
+  height: 30px;
+}
+.right-color input:last-child:hover{
+  background-color: white;
+}

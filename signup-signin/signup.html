@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <!-- navbar start -->
+    <nav class="login-nav">
+      <img src="../images/meesho_logo.JPG" alt="" />
+      <a href="./login.html">
+        <input id="submit" type="submit" value="Login" />
+      </a>
+    </nav>
+    <!-- navbar ends -->
+
+    <!-- form start -->
+    <form id="form">
+      <h1>Welcome to Meesho</h1>
+      <p>Create your account to start selling</p>
+      <div class="two-input">
+        <input id="number" type="number" placeholder="Mobile Number" />
+        <input type="submit" />
+      </div>
+      <div class="three-input">
+        <input id="otpsubmit" type="number" placeholder="Enter OTP" />
+        <input id="email" type="text" placeholder="Email ID" />
+        <input id="password" type="password" placeholder="Set Password" />
+      </div>
+      <button id="siBtn">Create your account</button>
+    </form>
+  </body>
+</html>
+<script>
+  let x = document.getElementById("siBtn");
+  let arr = JSON.parse(localStorage.getItem("myData")) || [];
+  x.addEventListener("click", function (event) {
+    event.preventDefault();
+    let obj = {
+      number: document.getElementById("number").value,
+      otpsubmit: document.getElementById("otpsubmit").value,
+      email: document.getElementById("email").value,
+      password: document.getElementById("password").value,
+    };
+    console.log(obj);
+
+    arr.push(obj);
+    localStorage.setItem("myData", JSON.stringify(arr));
+  });
+</script>

@@ -1,0 +1,75 @@
+.login-nav {
+  /* border:1px solid red; */
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+.login-nav #submit {
+  width: 100px;
+  font-size: 20px;
+  border: 2px solid deeppink;
+  border-radius: 3px;
+  color: deeppink;
+  background-color: #fff;
+}
+
+#form {
+  /* border: 1px solid red; */
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 35%;
+  height: 500px;
+  margin: 50px;
+  margin-left: 500px;
+  padding: 20px;
+}
+#form p {
+  font-size: 20px;
+  color: rgb(53, 51, 51);
+}
+.two-input input {
+  border: 1px solid gray;
+  border-radius: 4px;
+  width: 45%;
+  height: 35px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+.two-input input:last-child {
+  width: 20%;
+  font-size: 16px;
+  background-color: white;
+}
+.three-input {
+  display: flex;
+  flex-direction: column;
+}
+.three-input input {
+  border: 1px solid gray;
+  border-radius: 4px;
+  width: 80%;
+  height: 35px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.last-input {
+  border: 1px solid gray;
+  background-color: white;
+  border-radius: 4px;
+  width: 80%;
+  height: 35px;
+  margin: auto;
+  margin-left: 50px;
+  font-size: 20px;
+}
+.last-input:hover {
+  background-color: rgb(241, 235, 238);
+}
+
+#siBtn{
+  margin-left: 50px;
+  width: 80%;
+  height: 35px;
+}
