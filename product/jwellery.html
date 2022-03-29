@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        margin: 5%;
+        grid-gap: 20px;
+      }
+      #container div {
+        border: 3px solid grey;
+      }
+      #container div img {
+        width: 100%;
+        height: 300px;
+      }
+      p,
+      h3,
+      h2 {
+        background-color: grey;
+        margin-left: 5px;
+        margin: auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <a href=""><h1>Jewelery</h1></a>
+
+    <div id="container"></div>
+  </body>
+</html>
+<script type="module">
+  let url = "http://fakestoreapi.com/products/category/jewelery";
+  let div_container = document.getElementById("container");
+
+  async function getProduct() {
+    let response = await fetch(url);
+    let product = await response.json();
+    console.log(product);
+    appendproduct(product);
+  }
+  getProduct();
+
+  function appendproduct(arr) {
+    arr.forEach((data) => {
+      let div = document.createElement("div");
+      let img = document.createElement("img");
+      img.src = data.image;
+
+      let category = document.createElement("p");
+      category.innerHTML = data.category;
+
+      let title = document.createElement("h3");
+      title.innerHTML = data.title;
+
+      let price = document.createElement("h2");
+      price.innerHTML = data.price;
+
+      div.append(img, title, price, category);
+      div_container.append(div);
+    });
+  }
+</script>
